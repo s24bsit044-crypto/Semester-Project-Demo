@@ -1,0 +1,18 @@
+BTBB Textbook Tutor - QA Dataset Cleaning Report
+================================================
+
+Rows: 3618
+Changed columns: question, answer only.
+Preserved exactly: subject, grade, chapter_or_unit, qa_type, source_sample_id, split.
+The original subject source CSVs and all page/unit identifiers were not edited.
+
+Cleaning performed:
+- Improved poorly formed/generic questions while retaining useful topic-specific questions.
+- Corrected common OCR spacing and punctuation issues conservatively.
+- Removed one clearly unrelated Biology learning-outcome sentence from Mathematics / Real Numbers QA answers.
+- Did not invent page numbers, units, grades, or textbook facts.
+
+Important:
+This is conservative automatic cleanup. OCR errors in formulas, diagrams, chemical notation,
+and scientific terminology may still need manual review against the original textbook pages.
+Use source_sample_id to join each QA row to its original source record and retain page citations.
